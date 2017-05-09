@@ -17,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <div style={styles.app}>
+        <h1>Redux-Tac-Toe</h1>
         <Board />
       </div>
     );

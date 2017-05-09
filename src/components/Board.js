@@ -2,9 +2,10 @@ import React from 'react';
 
 const styles = {
   board: {
-    width: '200px',
-    height: '200px',
-    backgroundColor: 'lightblue'
+    width: '300px',
+    height: '300px',
+    backgroundColor: 'lightblue',
+    borderRadius: '5px'
   }
 }
 
