@@ -7,8 +7,11 @@ const styles = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center'
+  },
+  title: {
+    margin: '30px 0'
   }
 };
 
@@ -16,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div style={styles.app}>
-        <h1>Redux-Tac-Toe</h1>
+        <h1 style={styles.title}>Redux-Tac-Toe</h1>
         <Board />
       </div>
     );

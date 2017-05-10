@@ -3,7 +3,7 @@ import React from 'react';
 const styles = {
   tile: {
     flexGrow: '1',
-    backgroundColor: 'white',
+    backgroundColor: 'lightgreen',
     borderRadius: '5px',
     margin: '5px'
   }
