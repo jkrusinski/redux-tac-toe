@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Board from '../containers/Board.js';
+import ScoreBoard from '../containers/ScoreBoard.js';
 
 const styles = {
   app: {
@@ -21,6 +22,7 @@ class App extends Component {
       <div style={styles.app}>
         <h1 style={styles.title}>Redux-Tac-Toe</h1>
         <Board />
+        <ScoreBoard />
       </div>
     );
   }
