@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Board from '../containers/Board.js';
+import GameBoard from '../containers/GameBoard.js';
 import ScoreBoard from '../containers/ScoreBoard.js';
 
 const styles = {
@@ -23,7 +23,7 @@ class App extends Component {
       <div>
         <h1 style={styles.title}>Redux-Tac-Toe</h1>
         <div style={styles.container}>
-          <Board />
+          <GameBoard />
           <ScoreBoard />
         </div>
       </div>

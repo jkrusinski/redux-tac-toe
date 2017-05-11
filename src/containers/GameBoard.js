@@ -24,7 +24,7 @@ const tiles = [
   [1, 1, 1]
 ];
 
-class Board extends Component {
+class GameBoard extends Component {
   render() {
     return (
       <div style={styles.board}>
@@ -40,4 +40,4 @@ class Board extends Component {
   }
 }
 
-export default Board;
+export default GameBoard;

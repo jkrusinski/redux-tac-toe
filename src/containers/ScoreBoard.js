@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TurnPanel from '../components/TurnPanel.js';
+import Players from '../components/Players.js';
 
 const styles ={
   board: {
@@ -15,7 +16,8 @@ class ScoreBoard extends Component {
   render() {
     return (
       <div style={styles.board}>
-        <TurnPanel />
+        <TurnPanel turn={true} />
+        <Players />
       </div>
     );
   }
