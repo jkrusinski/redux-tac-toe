@@ -3,26 +3,28 @@ import Board from '../containers/Board.js';
 import ScoreBoard from '../containers/ScoreBoard.js';
 
 const styles = {
-  app: {
+  container: {
     width: '100%',
-    height: '100%',
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'center'
+    justifyContent: 'space-around',
+    margin: '50px 0'
   },
   title: {
-    margin: '30px 0'
+    margin: '30px 0',
+    width: '100%',
+    textAlign: 'center',
   }
 };
 
 class App extends Component {
   render() {
     return (
-      <div style={styles.app}>
+      <div>
         <h1 style={styles.title}>Redux-Tac-Toe</h1>
-        <Board />
-        <ScoreBoard />
+        <div style={styles.container}>
+          <Board />
+          <ScoreBoard />
+        </div>
       </div>
     );
   }

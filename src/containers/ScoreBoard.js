@@ -4,7 +4,7 @@ const styles ={
   board: {
     width: '300px',
     height: '300px',
-    backgroundColor: 'lightyellow',
+    backgroundColor: 'lightsalmon',
     padding: '5px',
     borderRadius: '5px'
   }
