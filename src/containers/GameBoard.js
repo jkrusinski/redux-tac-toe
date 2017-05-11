@@ -31,7 +31,7 @@ class GameBoard extends Component {
         {tiles.map(row => (
           <div style={styles.row}>
             {row.map(tile => (
-              <Tile />
+              <Tile type="x"/>
             ))}
           </div>
         ))}
