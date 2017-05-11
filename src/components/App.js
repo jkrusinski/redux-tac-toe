@@ -10,9 +10,10 @@ const styles = {
     margin: '50px 0'
   },
   title: {
+    color: 'cadetblue',
     margin: '30px 0',
     width: '100%',
-    textAlign: 'center',
+    textAlign: 'center'
   }
 };
 
