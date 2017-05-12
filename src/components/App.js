@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { combineReducers, createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import * as reducers from '../reducers';
+
 import GameBoard from '../containers/GameBoard.js';
 import ScoreBoard from '../containers/ScoreBoard.js';
 
@@ -18,16 +23,24 @@ const styles = {
   }
 };
 
+const reducer = combineReducers(reducers);
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1 style={styles.title}>Redux-Tac-Toe</h1>
-        <div style={styles.container}>
-          <GameBoard />
-          <ScoreBoard />
+      <Provider store={store}>
+        <div>
+          <h1 style={styles.title}>Redux-Tac-Toe</h1>
+          <div style={styles.container}>
+            <GameBoard />
+            <ScoreBoard />
+          </div>
         </div>
-      </div>
+      </Provider>
     );
   }
 }
