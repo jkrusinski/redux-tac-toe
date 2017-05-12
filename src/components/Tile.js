@@ -32,12 +32,12 @@ const renderType = function(type) {
       );
 
     default:
-      return null;
+      return <div style={{ width: '90px', height: '90px' }}>&nbsp;</div>;
   }
 };
 
-const Tile = ({ type }) => (
-  <div style={ styles.tile }>
+const Tile = ({ type, row, col, clickHandler }) => (
+  <div className="tile" style={ styles.tile } onClick={() => clickHandler(row, col, 'x')}>
     { renderType(type) }
   </div>
 );

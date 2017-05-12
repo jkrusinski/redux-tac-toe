@@ -23,13 +23,15 @@ const styles = {
 
 class GameBoard extends Component {
   render() {
+
     const { board, toggleTile } = this.props;
+
     return (
       <div style={ styles.board }>
-        { board.map(row => (
+        { board.map((row, r) => (
           <div style={ styles.row }>
-            { row.map(tile => (
-              <Tile type={ tile } onClick={() => toggleTile()}/>
+            { row.map((tile, c) => (
+              <Tile type={ tile } row={r} col={c} clickHandler={toggleTile} />
             )) }
           </div>
         )) }
