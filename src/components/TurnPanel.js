@@ -17,7 +17,7 @@ const styles = {
 const TurnPanel = ({ turn }) => (
   <div style={styles.panel}>
     <h2 style={styles.turnHeader}>
-      Player { turn ? 'One\'s' : 'Two\'s' } Turn
+      Player { turn === 'x' ? 'One\'s' : 'Two\'s' } Turn
     </h2>
   </div>
 );
