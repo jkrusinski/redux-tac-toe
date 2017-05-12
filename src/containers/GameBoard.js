@@ -24,14 +24,19 @@ const styles = {
 class GameBoard extends Component {
   render() {
 
-    const { board, toggleTile } = this.props;
+    const { board, turn, toggleTile, toggleTurn } = this.props;
 
     return (
       <div style={ styles.board }>
         { board.map((row, r) => (
           <div style={ styles.row }>
             { row.map((tile, c) => (
-              <Tile type={ tile } row={r} col={c} clickHandler={toggleTile} />
+              <Tile type={ tile } clickHandler={() => {
+                if (tile === null) {
+                  toggleTile(r, c, turn);
+                  toggleTurn();
+                }
+              }} />
             )) }
           </div>
         )) }
@@ -40,8 +45,8 @@ class GameBoard extends Component {
   }
 }
 
-const mapStateToProps = function({ board }) {
-  return { board };
+const mapStateToProps = function({ board, turn }) {
+  return { board, turn };
 };
 
 const mapDispatchToProps = function(dispatch) {

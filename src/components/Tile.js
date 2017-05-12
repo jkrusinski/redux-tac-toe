@@ -36,8 +36,8 @@ const renderType = function(type) {
   }
 };
 
-const Tile = ({ type, row, col, clickHandler }) => (
-  <div className="tile" style={ styles.tile } onClick={() => clickHandler(row, col, 'x')}>
+const Tile = ({ type, clickHandler }) => (
+  <div className="tile" style={ styles.tile } onClick={() => clickHandler()}>
     { renderType(type) }
   </div>
 );

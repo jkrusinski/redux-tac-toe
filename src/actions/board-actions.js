@@ -4,4 +4,4 @@ export function toggleTile(row, col, player) {
 
 export function clearBoard() {
   return { type: 'CLEAR_BOARD' };
-}
+};
