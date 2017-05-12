@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../actions';
+
 import Tile from '../components/Tile.js';
 
 const styles = {
@@ -17,27 +21,29 @@ const styles = {
   }
 };
 
-// dummy data
-const tiles = [
-  [1, 1, 1],
-  [1, 1, 1],
-  [1, 1, 1]
-];
-
 class GameBoard extends Component {
   render() {
+    const { board, toggleTile } = this.props;
     return (
-      <div style={styles.board}>
-        {tiles.map(row => (
-          <div style={styles.row}>
-            {row.map(tile => (
-              <Tile type="x"/>
-            ))}
+      <div style={ styles.board }>
+        { board.map(row => (
+          <div style={ styles.row }>
+            { row.map(tile => (
+              <Tile type={ tile } onClick={() => toggleTile()}/>
+            )) }
           </div>
-        ))}
+        )) }
       </div>
     );
   }
 }
 
-export default GameBoard;
+const mapStateToProps = function({ board }) {
+  return { board };
+};
+
+const mapDispatchToProps = function(dispatch) {
+  return bindActionCreators(actions, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(GameBoard);
