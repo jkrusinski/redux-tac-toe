@@ -14,7 +14,7 @@ const styles = {
 
 const renderType = function(type) {
 
-  switch(type) {
+  switch (type) {
 
     case 'o':
       return (

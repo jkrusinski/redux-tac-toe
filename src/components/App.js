@@ -13,7 +13,8 @@ const styles = {
     color: 'cadetblue',
     margin: '30px 0',
     width: '100%',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: '64px'
   }
 };
 
